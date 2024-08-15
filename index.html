@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Shape Image Creator</title>
+    <style>
+        body {
+          display: flex;
+        }
+        canvas {
+            width: 25vw;
+            height: 25vw;
+            border: 1px solid black;
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        .controls {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 600px;
+        }
+        .fan-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #ddd;
+            padding: 50px;
+            width: 200px;
+        }
+        label {
+            font-weight: bold;
+        }
+        button {
+            width: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <div class="controls">
+        <!-- Controls for Fan 1 -->
+        <div class="fan-controls">
+            <label>マーク1</label>
+            <label for="color1">色: </label>
+            <input type="color" id="color1" value="#ff0000">
+            <label for="radius1">半径: </label>
+            <input type="range" id="radius1" min="10" max="300" value="100">
+            <label for="startAngle1">回転: </label>
+            <input type="range" id="startAngle1" min="0" max="360" value="0">
+            <label for="angle1">開き: </label>
+            <input type="range" id="angle1" min="0" max="360" value="90">
+        </div>
+
+        <!-- Controls for Fan 2 -->
+        <div class="fan-controls">
+            <label>マーク2</label>
+            <label for="color2">色: </label>
+            <input type="color" id="color2" value="#00ff00">
+            <label for="radius2">半径: </label>
+            <input type="range" id="radius2" min="10" max="300" value="100">
+            <label for="startAngle2">回転: </label>
+            <input type="range" id="startAngle2" min="0" max="360" value="90">
+            <label for="angle2">開き: </label>
+            <input type="range" id="angle2" min="0" max="360" value="90">
+        </div>
+
+        <!-- Controls for Fan 3 -->
+        <div class="fan-controls">
+            <label>マーク3</label>
+            <label for="color3">色: </label>
+            <input type="color" id="color3" value="#0000ff">
+            <label for="radius3">半径: </label>
+            <input type="range" id="radius3" min="10" max="300" value="100">
+            <label for="startAngle3">回転: </label>
+            <input type="range" id="startAngle3" min="0" max="360" value="180">
+            <label for="angle3">開き: </label>
+            <input type="range" id="angle3" min="0" max="360" value="90">
+        </div>
+
+        <!-- Controls for Fan 4 -->
+        <div class="fan-controls">
+            <label>マーク4</label>
+            <label for="color4">色: </label>
+            <input type="color" id="color4" value="#ffff00">
+            <label for="radius4">半径: </label>
+            <input type="range" id="radius4" min="10" max="300" value="100">
+            <label for="startAngle4">回転: </label>
+            <input type="range" id="startAngle4" min="0" max="360" value="270">
+            <label for="angle4">開き: </label>
+            <input type="range" id="angle4" min="0" max="360" value="90">
+        </div>
+
+        <button onclick="saveImage()">保存</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
